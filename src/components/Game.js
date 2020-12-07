@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header";
 import GameInitial from "./GameInitial";
 import GamePlay from "./GamePlay";
+import Rules from "./Rules";
 import Button from "./Button";
 
 const Game = () => {
@@ -71,6 +72,8 @@ const Game = () => {
                     result={result}
                     onRestart={restartHandler}
                 />}
+            <Button small transparent right text="Rules" clicked={modalHandler} />
+            <Rules active={modalActive} closed={modalHandler} />
         </main>
     )
 }
