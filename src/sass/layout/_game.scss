@@ -4,3 +4,60 @@
   height: auto;
   overflow: hidden;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: 2.0rem;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+$big-fallback: 8px;
+$big-size: 4vh;
+$small-fallback: 5px;
+$small-size: 3vh;
+
+
+@mixin big-beat() {
+  font-size: $big-fallback; /* fallback */
+  font-size: $big-size;
+}
+
+@mixin small-beat() {
+  font-size: $small-fallback; /* fallback */
+  font-size: $small-size;
+}
+
+.heart {
+  @include big-beat();
+}
+
+.animate-beat {
+    animation: beat 3s infinite;
+}
+
+body {
+  background-color: #FFCDD2;
+}
+
+@keyframes beat {
+  0% {
+    @include small-beat();
+  }
+  30% {
+    @include big-beat();
+  }
+  60% {
+    @include small-beat();
+  }
+  90% {
+    @include big-beat();
+  }
+  100% {
+    @include small-beat();
+  }
+}

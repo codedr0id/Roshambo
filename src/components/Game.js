@@ -70,6 +70,9 @@ const Game = () => {
                     result={result}
                     onRestart={restartHandler}
                 />}
+            <div className="footer">
+                <p>Made with <span class="heart animate-beat">🧡</span> by <a href="https://github.com/codedr0id" rel="noreferrer" target="_blank" style={{fontVariant: "small-caps", marginLeft: "5px", color: "cyan", textDecoration: "none"}}>Mehul</a></p>
+            </div>
         </main>
     )
 }
