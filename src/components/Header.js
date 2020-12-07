@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../images/logo.svg";
+import Button from "./Button";
+import Rules from "./Rules";
 
 const Header = props => (
     <header className="header">
@@ -10,6 +12,8 @@ const Header = props => (
                 <span className="score-box__number">{props.score}</span>
             </div>
         </div>
+        <Button small transparent right text="Rules" clicked={props.modalHandler} />
+        <Rules active={props.modalActive} closed={props.modalHandler} />
     </header>
 )
 

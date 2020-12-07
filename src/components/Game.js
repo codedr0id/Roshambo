@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Header from "./Header";
 import GameInitial from "./GameInitial";
 import GamePlay from "./GamePlay";
-import Rules from "./Rules";
-import Button from "./Button";
 
 const Game = () => {
     const [score, setScore] = useState(0);
@@ -64,7 +62,7 @@ const Game = () => {
 
     return (
         <main className="game">
-            <Header score={score} />
+            <Header score={score} modalActive={modalActive} modalHandler={modalHandler}/>
             {!started ? <GameInitial onPick={gamePlayHandler} /> :
                 <GamePlay
                     userPick={userPick}
@@ -72,8 +70,6 @@ const Game = () => {
                     result={result}
                     onRestart={restartHandler}
                 />}
-            <Button small transparent right text="Rules" clicked={modalHandler} />
-            <Rules active={modalActive} closed={modalHandler} />
         </main>
     )
 }
