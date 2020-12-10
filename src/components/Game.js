@@ -17,6 +17,7 @@ const Game = () => {
         setStarted(true);
         setUserPick(newUserPick);
 
+        const options = ["rock", "paper", "scissors"];
         const random = Math.floor(Math.random() * 3);
         const newHousePick = options[random];
         setHousePick(newHousePick);
@@ -31,9 +32,6 @@ const Game = () => {
 
     const restartHandler = () => {
         setStarted(false);
-        setUserPick(null);
-        setHousePick(null);
-        setResult(null);
     }
 
     const modalHandler = () => {

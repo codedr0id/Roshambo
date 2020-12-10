@@ -12,7 +12,7 @@ const Header = props => (
                 <span className="score-box__number">{props.score}</span>
             </div>
         </div>
-        <Button small transparent right text="Rules" clicked={props.modalHandler} />
+        <Button small transparent right centerMobile text="Rules" clicked={props.modalHandler} />
         <Rules active={props.modalActive} closed={props.modalHandler} />
     </header>
 )
