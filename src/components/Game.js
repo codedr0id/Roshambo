@@ -18,7 +18,7 @@ const Game = () => {
         setUserPick(newUserPick);
 
         const options = ["rock", "paper", "scissors"];
-        const random = Math.floor(Math.random() * 3);
+        const random = Math.floor(Math.random() * options.length);
         const newHousePick = options[random];
         setHousePick(newHousePick);
 
@@ -27,7 +27,7 @@ const Game = () => {
         setTimeout(() => {
             if (newResult === "win") { setScore(score + 1) };
             if (newResult === "lose") { setScore(score - 1) };
-        }, 2000)
+        }, 2500)
     }
 
     const restartHandler = () => {
