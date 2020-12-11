@@ -1,7 +1,7 @@
-$play-button-width: 14.5rem;
-$play-button-height: 14.8rem;
-$play-button-width-mobile: 25.6vw;
-$play-button-height-mobile: 25.9vw;
+$play-button-width: 19.8rem;
+$play-button-height: 20.3rem;
+$play-button-width-mobile: 34.5vw;
+$play-button-height-mobile: 35.4vw;
 
 @mixin mobileDimensions {
   width: $play-button-width-mobile;
@@ -10,7 +10,7 @@ $play-button-height-mobile: 25.9vw;
 
 @mixin mobileInnerDimensions {
   height: calc(#{$play-button-height-mobile} * 75 / 100);
-  width: calc(#{$play-button-height-mobile} * 75 / 100);;
+  width: calc(#{$play-button-height-mobile} * 75 / 100);
   top: 11.3%;
   left: 11.6%;
 }
@@ -22,9 +22,9 @@ $play-button-height-mobile: 25.9vw;
   box-shadow: 0 3px 3px 0 rgba(#000, 0.2);
   position: relative;
   transition: transform 0.4s;
-
+  
   &:not(.big):hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 
   @include respond(mobile) {
@@ -37,11 +37,11 @@ $play-button-height-mobile: 25.9vw;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 0.65rem);
+    height: calc(100% - 0.9rem);
     border-radius: 50%;
 
     @include respond(mobile) {
-      height: calc(100% - 0.43rem);
+      height: calc(100% - 0.59rem);
     }
   }
 
@@ -69,8 +69,8 @@ $play-button-height-mobile: 25.9vw;
     height: 30rem;
 
     @include respond(mobile-land) {
-      width: 34.5vw;
-      height: 35.4vw;
+      width: $play-button-width-mobile;
+      height: $play-button-height-mobile;
     }
 
     &::before {
@@ -112,11 +112,11 @@ $play-button-height-mobile: 25.9vw;
 
   &__inner {
     background: #babfd4;
-    width: 11.1rem;
-    height: 11.1rem;
+    width: 15.2rem;
+    height: 15.2rem;
     position: absolute;
-    top: 1.7rem;
-    left: 1.7rem;
+    top: 2.3rem;
+    left: 2.3rem;
     border-radius: 50%;
     z-index: 1;
 
@@ -131,11 +131,11 @@ $play-button-height-mobile: 25.9vw;
       bottom: 0;
       border-radius: 50%;
       width: 100%;
-      height: calc(100% - 0.58rem);
+      height: calc(100% - 0.9rem);
       background: linear-gradient(to top, #dadada, #f3f3f3);
 
       @include respond(mobile) {
-        height: calc(100% - 0.38rem);
+        height: calc(100% - 0.52rem);
       }
     }
   }
@@ -147,10 +147,7 @@ $play-button-height-mobile: 25.9vw;
     left: 3.4rem;
 
     @include respond(mobile-land) {
-      top: 11.3%;
-      left: 11.6%;
-      width: calc(35.4vw * 75 / 100);
-      height: calc(35.4vw * 75 / 100);
+      @include mobileInnerDimensions;
     }
 
     &::before {
@@ -164,7 +161,7 @@ $play-button-height-mobile: 25.9vw;
 
   &__icon {
     @include absCenter;
-    height: 5.8rem;
+    height: 8rem;
     z-index: 1;
 
     @include respond(mobile) {
@@ -173,18 +170,10 @@ $play-button-height-mobile: 25.9vw;
   }
 
   &.rock &__icon {
-    height: 4.7rem;
+    height: 6.4rem;
 
     @include respond(mobile) {
       height: 42.1%;
-    }
-  }
-
-  &.lizard &__icon {
-    height: 6rem;
-
-    @include respond(mobile) {
-      height: 54.1%;
     }
   }
 
@@ -209,8 +198,7 @@ $play-button-height-mobile: 25.9vw;
     width: 53.4vw;
     background-color: rgba(#fff, 0.02);
     z-index: -1;
-    animation: zoomInAbsolute 0.7s ease-out 0.1s;
-    animation-fill-mode: backwards;
+    animation: zoomInAbsolute 0.7s ease-out;
 
     @include respond(tablet) {
       height: 75.7vw;

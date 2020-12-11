@@ -18,6 +18,38 @@
   margin-bottom: 25px;
   width: 100%;
   text-align: center;
+
+  @include respond(mobile) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    font-size: 2.0rem;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  @include respond(mobile-land) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    font-size: 2.0rem;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+  }
+
+  @include respond(tablet) {
+    position: relative;
+    bottom: 0;
+    font-size: 2.0rem;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 $big-fallback: 8px;
